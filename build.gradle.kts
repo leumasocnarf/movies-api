@@ -5,6 +5,7 @@ val logback_version: String by project
 
 val postgres_version: String by project
 val exposed_version: String by project
+val hikaricp_version: String by project
 
 plugins {
     kotlin("jvm") version "1.9.10"
@@ -33,6 +34,7 @@ dependencies {
     implementation("org.postgresql:postgresql:$postgres_version")
     implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
+    implementation("com.zaxxer:HikariCP:$hikaricp_version")
     implementation("io.ktor:ktor-server-swagger-jvm")
     implementation("io.ktor:ktor-server-cors-jvm")
     implementation("io.ktor:ktor-server-host-common-jvm")
@@ -40,7 +42,7 @@ dependencies {
     implementation("io.ktor:ktor-server-default-headers-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("io.ktor:ktor-server-config-yaml:2.3.5")
+    implementation("io.ktor:ktor-server-config-yaml:$ktor_version")
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
