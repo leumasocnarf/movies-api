@@ -1,5 +1,6 @@
-package com.cinema.dao.entities
+package com.cinema.dao
 
+import com.cinema.dao.entities.MovieEntity
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import io.ktor.server.application.*

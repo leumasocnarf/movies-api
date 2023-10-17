@@ -1,6 +1,6 @@
 package com.cinema
 
-import com.cinema.dao.entities.DatabaseFactory
+import com.cinema.dao.DatabaseFactory
 import com.cinema.plugins.*
 import io.ktor.server.application.*
 
