@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: 'cinema-database'
+    image: 'postgres:15-alpine'
+    restart: always
+    environment:
+      POSTGRES_DB: "${PG_DB}"
+      POSTGRES_PASSWORD: "${PG_PASS}"
+      POSTGRES_USER: "${PG_USER}"
+    ports:
+      - "${PG_PORT}:${PG_PORT}"

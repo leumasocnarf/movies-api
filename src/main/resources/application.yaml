@@ -3,4 +3,10 @@ ktor:
         modules:
             - com.cinema.ApplicationKt.module
     deployment:
-        port: 8080
+        port: "$APP_PORT"
+
+database:
+    url: "$PG_URL"
+    user: "$PG_USER"
+    password: "$PG_PASS"
+    pool: 5

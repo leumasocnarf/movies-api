@@ -7,3 +7,5 @@ data class Movie(
     private val duration: Int,
     private val year: Int
 )
+
+
