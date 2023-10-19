@@ -1,5 +1,7 @@
 package com.cinema.plugins
 
+import com.cinema.dao.repositories.MovieRepository
+import com.cinema.routes.moviesRouting
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.plugins.statuspages.*
@@ -13,8 +15,6 @@ fun Application.configureRouting() {
         }
     }
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
+        moviesRouting(movieRepository = MovieRepository())
     }
 }
